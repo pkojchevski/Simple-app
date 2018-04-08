@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./main.css">  
+   
+    <title>Simple app Part1</title>
+</head>
+<body>
+    <main>
+        <div>
+            <button type="button" id='btn_open'>Add New Media</button>
+        </div>
+        <br>
+        <form>
+                <div>
+                  <input type="text" id="search" placeholder="Search titles..." size="30">
+                </div>
+              </form>
+        <div>
+          <table id='table'>
+            <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Publisher</th>
+                  <th>Type</th>
+                  <th>Notes</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+              
+            </tbody>
+           </table>
+        </div>
+    </main>
+
+    <div class="Mymodal" id='myModal'>
+   
+        <form name="mediaForm" id="mediaForm">
+                    <fieldset>
+                            <legend>Add/Update Media</legend>
+                            <input type="hidden" id='input_id'>
+                          <div>
+                            <label for="title">Title</label>
+                            <input type="text" id='title' name="title" placeholder='Add Title'>
+                          </div>
+                          <div class='error' id='titleErr'>
+                            Field title is required!
+                          </div>
+                            
+                          <div>
+                            <label for="author">Author</label>
+                            <input type="text" id='author' name="author" placeholder='Add Author'>
+                          </div>
+                          <div class='error' id = 'authorErr'>
+                            Field author or publisher are required!
+                          </div>
+
+                           <div>
+                             <label for="Publisher">Publisher</label>
+                             <input type="text" id='publisher' name="publisher" placeholder='Add Publisher'>
+                           </div>
+                           <div class='error' id = 'publisherErr'>
+                            Field author or publisher are required!
+                          </div>
+
+                            <div>
+                              <label for="title">Type</label>
+                              <select name="type" id="type">
+                                <option value=''></option>
+                                <option value="video">video</option>
+                                <option value="game">game</option>
+                                <option value="music">music</option>
+                                <option value="other">other</option>
+                              </select>
+                            </div>  
+
+                            <div class='error' id= 'typeErr'>
+                              Please choose type!
+                            </div>
+                    <div>
+                        <label for="notes">Notes</label>
+                        <input type="text" id='notes' name="notes" placeholder='Add Note'>
+                    </div>   
+                <button type='button' id='add'>Add</button>
+                <button type='button' id='update'>Update</button>
+                <button type="button" id="close">Close</button>
+            </fieldset>                    
+        </form>
+        
+        
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>  
+
